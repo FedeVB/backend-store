@@ -24,7 +24,7 @@ public class MovimientoCreateDto {
     private BigDecimal monto;
 
     @NotNull(message = "El movimiento no puede estar vacío")
-    @Pattern(regexp = "VENTA|COMPRA|DEVOLUCION", message = "El movimiento debe ser VENTA, COMPRA o DEVOLUCION")
+    @Pattern(regexp = "VENTA|COMPRA|DEVOLUCION|STOCK", message = "El movimiento debe ser VENTA, COMPRA , DEVOLUCION o STOCK")
     private String movimiento;
 
 }
