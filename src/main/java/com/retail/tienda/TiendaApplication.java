@@ -18,25 +18,5 @@ public class TiendaApplication implements CommandLineRunner {
     public void run(String... args) throws Exception {
         System.out.println("Inicio!!!");
 
-        try {
-            InetAddress ip = InetAddress.getLocalHost();
-            NetworkInterface network = NetworkInterface.getByInetAddress(ip);
-
-            byte[] mac = network.getHardwareAddress();
-
-            StringBuilder sb = new StringBuilder();
-            for (int i = 0; i < mac.length; i++) {
-                sb.append(String.format("%02X%s", mac[i], (i < mac.length - 1) ? "-" : ""));
-            }
-            System.out.println("Tu identificador único (MAC): " + sb.toString());
-            if (sb.toString().equals("08-8F-C3-DB-D0-F5")) {
-                System.out.println("Es igual");
-            } else {
-                System.out.println("Los identificadores no coinciden");
-            }
-
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
     }
 }
