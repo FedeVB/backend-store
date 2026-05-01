@@ -1,9 +1,7 @@
 package com.retail.tienda.entity;
 
 import jakarta.persistence.*;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.AllArgsConstructor;
+import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
 
 import java.math.BigDecimal;
@@ -12,7 +10,8 @@ import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "movimientos")
-@Data
+@Getter
+@Setter
 @NoArgsConstructor
 @AllArgsConstructor
 public class Movimiento {
