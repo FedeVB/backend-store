@@ -100,7 +100,7 @@ public class MovimientoServiceImpl implements MovimientoService {
     @Override
     public TotalMovimientoDto getTotals() {
         TotalProyection res = movimientoRepository.calcularTotales();
-        return new TotalMovimientoDto(res.getVentas(), res.getCompras(), res.getDevoluciones());
+        return new TotalMovimientoDto(res.getVentas(), res.getCompras(), res.getDevoluciones(), res.getStock());
     }
 
 

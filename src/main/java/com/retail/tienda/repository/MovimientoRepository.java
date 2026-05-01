@@ -14,7 +14,8 @@ public interface MovimientoRepository extends JpaRepository<Movimiento,Long>, Jp
     @Query("SELECT " +
             "COALESCE(SUM(CASE WHEN m.movimiento = 'VENTA' THEN m.monto ELSE 0 END), 0) as ventas, " +
             "COALESCE(SUM(CASE WHEN m.movimiento = 'COMPRA' THEN m.monto ELSE 0 END), 0) as compras, " +
-            "COALESCE(SUM(CASE WHEN m.movimiento = 'DEVOLUCION' THEN m.monto ELSE 0 END), 0) as devoluciones " +
+            "COALESCE(SUM(CASE WHEN m.movimiento = 'DEVOLUCION' THEN m.monto ELSE 0 END), 0) as devoluciones, " +
+            "COALESCE(SUM(CASE WHEN m.movimiento = 'STOCK' THEN m.monto ELSE 0 END), 0) as stock " +
             "FROM Movimiento m")
     TotalProyection calcularTotales();
 

@@ -14,5 +14,5 @@ public class TotalMovimientoDto {
     private BigDecimal totalVenta;
     private BigDecimal totalCompra;
     private BigDecimal totalDevolucion;
-
+    private BigDecimal totalStock;
 }
